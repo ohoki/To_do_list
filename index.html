@@ -5,25 +5,30 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TO_DO_LIST</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/8af996bb56.js" crossorigin="anonymous"></script>
   <script src="main.js" defer></script>
 </head>
 <body>
   <div id="container">
     <!-- 헤더 -->
     <header>
-      <h2>TO DO LIST</h2>
+      <h2>TO DO LIST<i class="fa-solid fa-book-open"></i></h2>
       <p>우리의 소중한 하루를 알차게~!</p>
     </header>
 
     <!-- 입력 창 -->
-    <section>
-      <input type="text" id="doInput" name="doInput">
-      <button type="button">추가하기</button>
+    <section id="topSection">
+      <div id="addList">
+        <input type="text" id="addInput" name="doInput" autofocus>
+      <button type="button" id="addBtn">추가하기</button>
+      </div>
       <p id="headerClock" ">clock</p>
     </section>
 
     <!-- 목록 창 -->
-    <section>
+    <section id="bottomSection">
       <div id="doList">
 
       </div>

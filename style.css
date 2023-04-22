@@ -1,0 +1,92 @@
+/* Global */
+:root {
+  /* Font size */
+
+  /* color */
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-green: #D5E8D7;
+  --color-beige: #F5E1BA;
+  --color-dark-beige: #A8956F;
+  --color-light-beige: #FFF3DB;
+  --color-blue: #5E7CA8;
+  --color-light-blue: #BAD1F5;
+}
+
+/* Universal tags */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+  border: none;
+  background-color: transparent;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-beige);
+}
+
+/* Container */
+#container {
+  width: 70vw;
+  height: 90vh;
+  margin: 50px auto;
+  padding: 20px 200px;
+  border: 1px solid var(--color-dark-beige);
+  border-radius: 10px;
+  text-align: center;
+  background-color: var(--color-light-beige);
+}
+
+/* 헤더 */
+header {
+  color: var(--color-dark-beige);
+  font-weight: bold;
+}
+header h2 {
+  font-size: 60px;
+}
+
+header h2 i {
+  margin-left: 30px;
+}
+
+header p {
+  position: relative;
+  left: 150px;
+  margin-bottom: 30px;
+}
+
+/* 입력창 */
+#addList {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+#addInput {
+  flex-grow: 1;
+  height: 29px;
+  border-bottom: 1px solid var(--color-dark-beige);
+  margin-right: 50px;
+}
+
+#addInput:focus {
+  outline: none;
+}
+
+#addBtn {
+  padding: 5px 20px;
+  background-color: var(--color-dark-beige);
+  border-radius: 5px;
+  color: var(--color-light-beige);
+  cursor: pointer;
+}
+
+#topSection p {
+  margin-top: 20px;
+  text-align: right;
+  color: var(--color-dark-beige);
+}
