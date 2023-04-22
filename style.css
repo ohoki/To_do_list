@@ -30,10 +30,10 @@ body {
 
 /* Container */
 #container {
-  width: 70vw;
+  width: 50%;
   height: 90vh;
   margin: 50px auto;
-  padding: 20px 200px;
+  padding: 20px 100px;
   border: 1px solid var(--color-dark-beige);
   border-radius: 10px;
   text-align: center;
@@ -71,6 +71,7 @@ header p {
   height: 29px;
   border-bottom: 1px solid var(--color-dark-beige);
   margin-right: 50px;
+  color: var(--color-dark-beige);
 }
 
 #addInput:focus {
@@ -89,4 +90,14 @@ header p {
   margin-top: 20px;
   text-align: right;
   color: var(--color-dark-beige);
+}
+
+/* 목록창 */
+#bottomSection div {
+  height: 250px;
+}
+section h2 {
+  text-align: left;
+  color: var(--color-dark-beige);
+  border-bottom: 1px solid var(--color-beige);
 }
