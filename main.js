@@ -109,3 +109,42 @@ function historyAll() {
     checkedBox[i].checked = true;
   }
 }
+
+//======= 6.enter키 입력시 리스트 추가 ====================
+let addInput = document.getElementById("addInput");
+addInput.addEventListener("keydown", (event) => {
+  if(event.key == "Enter") {
+    let addList = document.getElementById("addInput");
+    //구현  
+    if(addList.value == "") {
+      alert("할 일을 작성해주세요 :)");
+    } else {
+    //입력값 받기
+      let label = document.createElement("label");
+    label.setAttribute("id", "ckeck_btn");
+    label.textContent = addList.value;
+    //체크박스 만들기
+    let circle = document.createElement("i");
+    circle.classList.add("circle");
+    label.prepend(circle);
+
+    let ckb = document.createElement("input");
+    ckb.setAttribute("type", "checkbox");
+    ckb.setAttribute("id", "ckeck_btn");
+    label.prepend(ckb);
+    //버튼 만들기
+    let completBtn = document.createElement("button");
+    completBtn.setAttribute("type", "button");
+    completBtn.setAttribute("onclick", "moveHistory()");
+    completBtn.textContent = "Complete";
+    label.appendChild(completBtn);
+    //do list로 이동
+    let doList = document.getElementById("doList");
+    doList.appendChild(label);
+    }
+    //리셋
+    addList.value = "";
+    addList.focus();
+    }
+  }
+);

@@ -42,6 +42,7 @@ body {
 
 /* 헤더 */
 header {
+  width: 100%;
   color: var(--color-dark-beige);
   font-weight: bold;
 }
@@ -195,4 +196,9 @@ label button {
   font-weight: bold;
 }
 
+/* 푸터 */
+footer {
+  color: var(--color-dark-beige);
+  padding: 20px 0 0 0;
+}
 
