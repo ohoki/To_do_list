@@ -81,6 +81,13 @@ function moveDoList() {
 }
 
 //======= 4.LIST 삭제하기 ===============================
+function doListDeleteItems() {
+  let checkedBox = document.querySelectorAll("#doList input[type=checkbox]:checked");
+  for(let i=0; i<checkedBox.length; i++) {
+    checkedBox[i].parentNode.remove();
+  }
+}
+
 function historyDeleteItems() {
   let checkedBox = document.querySelectorAll("#history input[type=checkbox]:checked");
   for(let i=0; i<checkedBox.length; i++) {
@@ -88,9 +95,17 @@ function historyDeleteItems() {
   }
 }
 
-function doListDeleteItems() {
-  let checkedBox = document.querySelectorAll("#doList input[type=checkbox]:checked");
+//======= 5.전체 선택하기 ===============================
+function doListAll() {
+  let checkedBox = document.querySelectorAll("#doList input[type=checkbox]");
   for(let i=0; i<checkedBox.length; i++) {
-    checkedBox[i].parentNode.remove();
+    checkedBox[i].checked = true;
+  }
+}
+
+function historyAll() {
+  let checkedBox = document.querySelectorAll("#history input[type=checkbox]");
+  for(let i=0; i<checkedBox.length; i++) {
+    checkedBox[i].checked = true;
   }
 }
