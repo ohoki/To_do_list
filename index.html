@@ -22,18 +22,21 @@
     <section id="topSection">
       <div id="addList">
         <input type="text" id="addInput" name="doInput" autofocus>
-      <button type="button" id="addBtn">추가하기</button>
+      <button type="button" id="addBtn" onclick="addList()">추가하기</button>
       </div>
       <p id="headerClock" ">clock</p>
     </section>
 
     <!-- 목록 창 -->
     <section id="bottomSection">
-      <div id="doList">
-        <h2>DO LIST</h2>
+      <h2>DO LIST</h2>
+      <div id="doList" class="list_scrollbar">
+
       </div>
-      <div id="history">
-        <h2>HISTORY</h2>
+
+      <h2>HISTORY</h2>
+      <div id="history" class="list_scrollbar">
+        
 
       </div>
     </section>
