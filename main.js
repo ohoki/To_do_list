@@ -48,7 +48,9 @@ function addList() {
   label.prepend(ckb);
   //버튼 만들기
   let completBtn = document.createElement("button");
-  completBtn.textContent = "완료";
+  completBtn.setAttribute("type", "button");
+  completBtn.setAttribute("onclick", "moveHistory()");
+  completBtn.textContent = "Complete";
   label.appendChild(completBtn);
   //do list로 이동
   let doList = document.getElementById("doList");
@@ -59,3 +61,21 @@ function addList() {
   addList.focus();
 }
 
+//======= 3.LIST 이동하기 ===============================
+function moveHistory() {
+  let history = document.getElementById("history");
+  event.target.textContent = "Back";
+  event.target.parentNode.children[0].checked = true;
+  event.target.parentNode.setAttribute("style", "text-decoration:line-through");
+  event.target.setAttribute("onclick", "moveDoList()");
+  history.appendChild(event.target.parentNode);
+}
+
+function moveDoList() {
+  let doList = document.getElementById("doList");
+  event.target.textContent = "Complete";
+  event.target.parentNode.children[0].checked = false;
+  event.target.parentNode.setAttribute("style", "text-decoration:none");
+  event.target.setAttribute("onclick", "moveHistory()");
+  doList.appendChild(event.target.parentNode);
+}

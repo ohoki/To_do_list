@@ -93,14 +93,32 @@ header p {
 }
 
 /* 목록창 */
-#bottomSection div {
+.list_scrollbar {
   height: 250px;
   overflow: scroll;
 }
-section h2 {
-  text-align: left;
+.list_flex {
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-start;
   color: var(--color-dark-beige);
   border-bottom: 1px solid var(--color-beige);
+  padding: 0 15px 0 10px;
+}
+
+.list_flex span {
+  margin: 0 10px;
+  color: var(--color-beige);
+}
+
+.list_flex button{
+  color: var(--color-blue);
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.list_flex>span {
+  padding: 5px 0 0 0;
 }
 
 .list_scrollbar::-webkit-scrollbar {
@@ -121,6 +139,18 @@ section h2 {
   margin: 5px;
   cursor: pointer;
   color: var(--color-dark-beige);
+  border-radius: 5px;
+}
+
+#history label {
+  position: relative;
+  display: block;
+  text-align: left;
+  padding: 5px 10px;
+  background-color: rgba(170, 170, 170, 0.5);
+  margin: 5px;
+  cursor: pointer;
+  color: rgba(170, 170, 170);
   border-radius: 5px;
 }
 
