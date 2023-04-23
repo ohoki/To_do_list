@@ -79,3 +79,18 @@ function moveDoList() {
   event.target.setAttribute("onclick", "moveHistory()");
   doList.appendChild(event.target.parentNode);
 }
+
+//======= 4.LIST 삭제하기 ===============================
+function historyDeleteItems() {
+  let checkedBox = document.querySelectorAll("#history input[type=checkbox]:checked");
+  for(let i=0; i<checkedBox.length; i++) {
+    checkedBox[i].parentNode.remove();
+  }
+}
+
+function doListDeleteItems() {
+  let checkedBox = document.querySelectorAll("#doList input[type=checkbox]:checked");
+  for(let i=0; i<checkedBox.length; i++) {
+    checkedBox[i].parentNode.remove();
+  }
+}
